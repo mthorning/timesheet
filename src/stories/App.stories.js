@@ -1,6 +1,6 @@
-import Interval from '../components/Interval.svelte'
 import App from '../App.svelte'
 
+import Interval from './views/Interval.svelte'
 import Day from './views/Day.svelte'
 
 export default {title: 'App Components'}

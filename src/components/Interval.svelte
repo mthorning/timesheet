@@ -1,5 +1,8 @@
 <script>
     import { createEventDispatcher } from 'svelte' 
+    import { minsToString } from '../utils'
+
+    export let deleteInterval;
     
     let from = '00:00';
     let to = '00:00';
@@ -26,8 +29,24 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
+    .close {
+        cursor: pointer;
+        color: rgba(128, 0, 0,3);
+        border: 1px solid rgba(128, 0, 0,3);
+        border-radius: 8px;
+        height: 15px;
+        width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1px;
+    }
+    .close::after {
+            content: "x"
+        
+    }
+
 </style>
 
 <div>
@@ -39,5 +58,6 @@
         <label for="to">to: </label>
         <input type="time" id="to" name="to" bind:value={to}>
     </section>
-    <p>{(interval / 60).toFixed(1)}</p>
+    <p>{minsToString(interval)}</p>
+    <div class="close" on:click={deleteInterval} />
 </div>
