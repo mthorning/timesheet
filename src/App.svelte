@@ -33,19 +33,30 @@
 </script>
 
 <style>
-    div {
-        width: 400px;
+    section {
+        width: 100%;
+        height: 750px;
         display: flex;
         flex-direction: column;
+        padding: 5px;
+    }
+    div {
+        width: 470px;
+        height: 790px;
+        padding-right: 20px;
+        overflow-y: auto;
     }
     h3 {
+        margin-right: 20px;
         align-self: flex-end;
     }   
 </style>
 
-<div>
+<section>
+    <div>
     {#each days as day, i}
         <Day {day} {dayTarget} updateMinutes={updateMinutes(i)} />
     {/each}
+    </div>
     <h3>{minsToString(totalTime)} [ {remaining} ]</h3>
-</div>
+</section>

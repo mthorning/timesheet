@@ -40,14 +40,14 @@
 
 <style>
     div {
-        width: 100%;
+        padding: 5px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 455px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
     section {
-        margin: 8px;
         width: 100%;
     }
     button, p {
@@ -55,8 +55,8 @@
     }   
 </style>
 
-<h4>{day}</h4>
 <div>
+    <h4>{day}</h4>
     {#each intervals as interval, i}
         <section>
             <Interval 

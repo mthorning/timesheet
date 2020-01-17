@@ -1,5 +1,4 @@
-import App from '../App.svelte'
-
+import App from './views/App.svelte'
 import Interval from './views/Interval.svelte'
 import Day from './views/Day.svelte'
 
